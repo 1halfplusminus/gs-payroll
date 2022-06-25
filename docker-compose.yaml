@@ -1,0 +1,18 @@
+services:
+  maria:
+    image: mariadb:10.7
+    ports:
+      - 3306:3306
+    environment: 
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_PASSWORD=password
+      - MYSQL_USER=user
+      - MYSQL_DATABASE=db 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: maria
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    ports:
+      - 8082:80

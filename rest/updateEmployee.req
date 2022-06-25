@@ -1,0 +1,4 @@
+PUT http://localhost:8080/employees/3 HTTP/1.1
+content-type: application/json
+
+{"name": "Samwise Gamgee", "role": "ring bearer"}
